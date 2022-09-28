@@ -27,6 +27,8 @@ export function Calendar<Multiple extends boolean = false>(props: CalendarProps<
     if (!multiple) {
       return onChange(date);
     }
+console.log('mantine value', value)
+console.log('mantine date', date)
 
     const isSelected = value.some((val: Date) => isSameDate(val, date));
     return onChange(
